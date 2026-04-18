@@ -14,7 +14,7 @@ export default function CaseStudy({ project }) {
     }, { threshold: 0.1 })
     document.querySelectorAll('.reveal').forEach(el => io.observe(el))
     return () => io.disconnect()
-  }, [])
+  }, [project.slug])
 
   if (!project) return null
 
@@ -257,7 +257,7 @@ function ResultsSection({ section }) {
           <p className="reveal d2" style={{ fontFamily: 'var(--serif)', fontWeight: 300, fontSize: '20px', lineHeight: 1.7, color: 'var(--ink)', marginBottom: '48px' }}>{section.body}</p>
 
           <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
-            {section.learnings.map((l, i) => (
+            {section.learnings && section.learnings.map((l, i) => (
               <div key={i} className="reveal d2" style={{ display: 'grid', gridTemplateColumns: '48px 1fr', gap: '24px', padding: '32px', background: 'var(--bg-2)', border: '1px solid var(--rule-soft)' }}>
                 <p style={{ fontFamily: 'var(--serif)', fontStyle: 'italic', fontSize: '32px', color: 'var(--gold)', lineHeight: 1 }}>{l.num}</p>
                 <div>
