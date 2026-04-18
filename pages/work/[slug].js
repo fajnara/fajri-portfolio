@@ -67,7 +67,7 @@ function CaseHero({ project }) {
 
       <h1 style={{
         fontFamily: 'var(--serif)', fontWeight: 300,
-        fontSize: 'clamp(56px, 9vw, 140px)',
+        fontSize: 'clamp(32px, 6vw, 140px)',
         lineHeight: 0.92, letterSpacing: '-0.02em', color: 'var(--cream)',
         marginBottom: '24px',
       }}>
@@ -82,7 +82,7 @@ function CaseHero({ project }) {
 
       {project.meta && (
         <div style={{
-          display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)',
+          display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)',
           gap: '0', borderTop: '1px solid var(--rule-soft)',
         }}>
           {[
@@ -107,7 +107,8 @@ function CaseHero({ project }) {
 function CaseSection({ section }) {
   if (section.steps) return <ProcessSection section={section} />
   if (section.images) return <FinalDesignSection section={section} />
-  if (section.stats) return <ResultsSection section={section} />
+  if (section.stats && section.learnings) return <ResultsSection section={section} />
+  if (section.stats) return <OverviewSection section={section} />
   if (section.personas) return <ResearchSection section={section} />
   return <TextSection section={section} />
 }
@@ -115,7 +116,7 @@ function CaseSection({ section }) {
 function TextSection({ section }) {
   return (
     <section style={{ padding: '100px 0', borderBottom: '1px solid var(--rule-soft)' }}>
-      <div style={{ display: 'grid', gridTemplateColumns: '200px 1fr', gap: '80px', alignItems: 'start' }}>
+      <div className="case-grid" style={{ display: 'grid', gridTemplateColumns: '200px 1fr', gap: '80px', alignItems: 'start' }}>
         <div className="reveal">
           <p style={{ fontFamily: 'var(--mono)', fontSize: '11px', letterSpacing: '0.2em', textTransform: 'uppercase', color: 'var(--gold)' }}>{section.num}</p>
         </div>
@@ -138,11 +139,39 @@ function TextSection({ section }) {
     </section>
   )
 }
+function OverviewSection({ section }) {
+  return (
+    <section style={{ padding: '100px 0', borderBottom: '1px solid var(--rule-soft)' }}>
+      <div className="case-grid" style={{ display: 'grid', gridTemplateColumns: '200px 1fr', gap: '80px' }}>
+        <div className="reveal">
+          <p style={{ fontFamily: 'var(--mono)', fontSize: '11px', letterSpacing: '0.2em', textTransform: 'uppercase', color: 'var(--gold)' }}>{section.num}</p>
+        </div>
+        <div>
+          <h2 className="reveal d1" style={{ fontFamily: 'var(--serif)', fontWeight: 300, fontSize: 'clamp(32px, 4vw, 52px)', lineHeight: 1.05, color: 'var(--cream)', marginBottom: '40px' }}>{section.heading}</h2>
+          <div className="reveal d1 stats-row" style={{ display: 'flex', gap: '48px', marginBottom: '48px', paddingBottom: '40px', borderBottom: '1px solid var(--rule-soft)', flexWrap: 'wrap' }}>
+            {section.stats.map((s, i) => (
+              <div key={i}>
+                <p style={{ fontFamily: 'var(--serif)', fontWeight: 300, fontSize: '48px', lineHeight: 1, color: 'var(--gold)', letterSpacing: '-0.02em' }}>{s.value}</p>
+                <p style={{ fontFamily: 'var(--mono)', fontSize: '10px', color: 'var(--ink-quiet)', letterSpacing: '0.12em', textTransform: 'uppercase', marginTop: '8px' }}>{s.label}</p>
+              </div>
+            ))}
+          </div>
+          {section.body.split('\n\n').map((para, i) => (
+            <p key={i} className="reveal d2" style={{ fontFamily: 'var(--serif)', fontWeight: 300, fontSize: '20px', lineHeight: 1.7, color: 'var(--ink)', marginBottom: '20px' }}>{para}</p>
+          ))}
+          {section.quote && (
+            <blockquote className="reveal d2" style={{ margin: '40px 0 0', padding: '28px 36px', borderLeft: '2px solid var(--gold)', background: 'var(--bg-2)', fontFamily: 'var(--serif)', fontStyle: 'italic', fontWeight: 300, fontSize: '20px', lineHeight: 1.5, color: 'var(--cream)' }}>{section.quote}</blockquote>
+          )}
+        </div>
+      </div>
+    </section>
+  )
+}
 
 function ResearchSection({ section }) {
   return (
     <section style={{ padding: '100px 0', borderBottom: '1px solid var(--rule-soft)' }}>
-      <div style={{ display: 'grid', gridTemplateColumns: '200px 1fr', gap: '80px' }}>
+      <div className="case-grid" style={{ display: 'grid', gridTemplateColumns: '200px 1fr', gap: '80px' }}>
         <div className="reveal">
           <p style={{ fontFamily: 'var(--mono)', fontSize: '11px', letterSpacing: '0.2em', textTransform: 'uppercase', color: 'var(--gold)' }}>{section.num}</p>
         </div>
@@ -150,7 +179,7 @@ function ResearchSection({ section }) {
           <h2 className="reveal d1" style={{ fontFamily: 'var(--serif)', fontWeight: 300, fontSize: 'clamp(32px, 4vw, 52px)', lineHeight: 1.05, color: 'var(--cream)', marginBottom: '32px' }}>{section.heading}</h2>
           <p className="reveal d1" style={{ fontFamily: 'var(--serif)', fontWeight: 300, fontSize: '20px', lineHeight: 1.7, color: 'var(--ink)', marginBottom: '48px' }}>{section.body}</p>
 
-          <div className="reveal d2" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '24px', marginBottom: '48px' }}>
+          <div className="persona-grid reveal d2" style={{ display: 'grid', gap: '24px', marginBottom: '48px' }}>
             {section.personas.map((p, i) => (
               <div key={i} style={{ background: 'var(--bg-2)', border: '1px solid var(--rule-soft)', padding: '36px' }}>
                 <p style={{ fontFamily: 'var(--serif)', fontWeight: 300, fontSize: '22px', color: 'var(--cream)', marginBottom: '4px' }}>{p.name}</p>
@@ -178,7 +207,7 @@ function ResearchSection({ section }) {
 function ProcessSection({ section }) {
   return (
     <section style={{ padding: '100px 0', borderBottom: '1px solid var(--rule-soft)' }}>
-      <div style={{ display: 'grid', gridTemplateColumns: '200px 1fr', gap: '80px' }}>
+      <div className="case-grid" style={{ display: 'grid', gridTemplateColumns: '200px 1fr', gap: '80px' }}>
         <div className="reveal">
           <p style={{ fontFamily: 'var(--mono)', fontSize: '11px', letterSpacing: '0.2em', textTransform: 'uppercase', color: 'var(--gold)' }}>{section.num}</p>
         </div>
@@ -186,7 +215,7 @@ function ProcessSection({ section }) {
           <h2 className="reveal d1" style={{ fontFamily: 'var(--serif)', fontWeight: 300, fontSize: 'clamp(32px, 4vw, 52px)', lineHeight: 1.05, color: 'var(--cream)', marginBottom: '32px' }}>{section.heading}</h2>
           <p className="reveal d1" style={{ fontFamily: 'var(--serif)', fontWeight: 300, fontSize: '20px', lineHeight: 1.7, color: 'var(--ink)', marginBottom: '48px' }}>{section.body}</p>
 
-          <div className="reveal d2" style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '1px', background: 'var(--rule-soft)', border: '1px solid var(--rule-soft)', marginBottom: '48px' }}>
+          <div className="reveal d2" style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '1px', background: 'var(--rule-soft)', border: '1px solid var(--rule-soft)', marginBottom: '48px' }}>
             {section.steps.map((s, i) => (
               <div key={i} style={{ background: 'var(--bg)', padding: '32px 28px' }}>
                 <p style={{ fontFamily: 'var(--mono)', fontSize: '11px', color: 'var(--gold)', letterSpacing: '0.2em', marginBottom: '20px' }}>{s.num}</p>
@@ -213,7 +242,7 @@ function ProcessSection({ section }) {
 function FinalDesignSection({ section }) {
   return (
     <section style={{ padding: '100px 0', borderBottom: '1px solid var(--rule-soft)' }}>
-      <div style={{ display: 'grid', gridTemplateColumns: '200px 1fr', gap: '80px' }}>
+      <div className="case-grid" style={{ display: 'grid', gridTemplateColumns: '200px 1fr', gap: '80px' }}>
         <div className="reveal">
           <p style={{ fontFamily: 'var(--mono)', fontSize: '11px', letterSpacing: '0.2em', textTransform: 'uppercase', color: 'var(--gold)' }}>{section.num}</p>
         </div>
@@ -238,14 +267,14 @@ function FinalDesignSection({ section }) {
 function ResultsSection({ section }) {
   return (
     <section style={{ padding: '100px 0', borderBottom: '1px solid var(--rule-soft)' }}>
-      <div style={{ display: 'grid', gridTemplateColumns: '200px 1fr', gap: '80px' }}>
+      <div className="case-grid" style={{ display: 'grid', gridTemplateColumns: '200px 1fr', gap: '80px' }}>
         <div className="reveal">
           <p style={{ fontFamily: 'var(--mono)', fontSize: '11px', letterSpacing: '0.2em', textTransform: 'uppercase', color: 'var(--gold)' }}>{section.num}</p>
         </div>
         <div>
           <h2 className="reveal d1" style={{ fontFamily: 'var(--serif)', fontWeight: 300, fontSize: 'clamp(32px, 4vw, 52px)', lineHeight: 1.05, color: 'var(--cream)', marginBottom: '48px' }}>{section.heading}</h2>
 
-          <div className="reveal d1" style={{ display: 'flex', gap: '64px', marginBottom: '56px', paddingBottom: '56px', borderBottom: '1px solid var(--rule-soft)' }}>
+          <div className="reveal d1 " style={{ display: 'flex', gap: '64px', marginBottom: '56px', paddingBottom: '56px', borderBottom: '1px solid var(--rule-soft)' }}>
             {section.stats.map((s, i) => (
               <div key={i}>
                 <p style={{ fontFamily: 'var(--serif)', fontWeight: 300, fontSize: '64px', lineHeight: 1, color: 'var(--gold)', letterSpacing: '-0.02em' }}>{s.value}</p>
