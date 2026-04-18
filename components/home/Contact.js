@@ -3,8 +3,8 @@ export default function Contact() {
     <section className="contact" id="contact">
       <span className="eyebrow">04 — Let&#39;s Talk</span>
       <h2>Have a project<br />worth <em>getting right?</em></h2>
-      <a className="email" href="mailto:studio@fajri.design">
-        studio@fajri.design
+      <a className="email" href="mailto:fajnara.art@gmail.com">
+        fajnara.art@gmail.com
         <span className="arr">↗</span>
       </a>
       <div className="socials">
