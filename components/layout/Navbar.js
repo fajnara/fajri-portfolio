@@ -8,10 +8,10 @@ export default function Navbar() {
       fontFamily: 'var(--mono)', fontSize: '12px', letterSpacing: '0.08em', textTransform: 'uppercase',
       color: 'var(--ink-dim)',
     }}>
-      <div className="mark">
+      <Link href="/#top" className="mark">
         <span className="dot" />
         <span>Fajri&nbsp;Studio</span>
-      </div>
+      </Link>
       <ul>
         <li><Link href="/#work">Work</Link></li>
         <li><Link href="/#about">About</Link></li>

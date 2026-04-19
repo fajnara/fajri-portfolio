@@ -8,10 +8,10 @@ export default function Contact() {
         <span className="arr">↗</span>
       </a>
       <div className="socials">
-        <a href="https://instagram.com" target="_blank" rel="noreferrer">Instagram</a>
-        <a href="https://read.cv" target="_blank" rel="noreferrer">Read.cv</a>
-        <a href="https://dribbble.com" target="_blank" rel="noreferrer">Dribbble</a>
-        <a href="https://linkedin.com" target="_blank" rel="noreferrer">LinkedIn</a>
+        <a href="https://www.instagram.com/fajnara?igsh=MWY0M2x5YTZwcDZtcw%3D%3D&utm_source=qr" target="_blank" rel="noreferrer">Instagram</a>
+        <a href="https://www.upwork.com/freelancers/~01986ed456143f44ca?mp_source=share" target="_blank" rel="noreferrer">Upwork</a>
+        {/* <a href="https://dribbble.com" target="_blank" rel="noreferrer">Dribbble</a> */}
+        <a href="https://www.linkedin.com/in/fajriannur/" target="_blank" rel="noreferrer">LinkedIn</a>
       </div>
     </section>
   )

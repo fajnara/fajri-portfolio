@@ -13,10 +13,12 @@ export default function Skills() {
       tags: ['Editorial', 'Campaigns', 'Typography', 'Print & Motion'],
     },
     {
-      idx: '/ 03', glyph: '❋',
-      title: 'Branding & Identity', titleEm: 'Branding',
-      desc: 'Identity work for founders who know their north. Marks, voice, and visual languages built to compound over decades.',
-      tags: ['Logo & Wordmark', 'Brand Guidelines', 'Naming', 'Art Direction'],
+      idx: '/ 03',
+      glyph: '⌗',
+      title: 'Front End Dev',
+      titleEm: 'End',
+      desc: 'Clean, performant websites built from scratch. From landing pages to full web apps',
+      tags: ['Next.js', 'React', 'HTML/CSS', 'Supabase'],
     },
   ]
 
