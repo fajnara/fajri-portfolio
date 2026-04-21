@@ -7,6 +7,11 @@ export default function About() {
       </div>
       <div className="about-grid">
         <div className="about-portrait reveal">
+          <img
+            src="/images/portrait.webp"
+            alt="Muhammad Fajriannur"
+            style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+          />
           <span className="corner c-tl" /><span className="corner c-tr" />
           <span className="corner c-bl" /><span className="corner c-br" />
           <span className="label">// portrait.fajri — 4:5</span>

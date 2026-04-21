@@ -17,6 +17,7 @@ export const projects = [
       deliverables: 'Brand Identity\nLanding Page · Design System',
       status: 'Completed\nPortfolio Work',
     },
+    link: 'https://fajriannur.netlify.app/lumiere',
     description: 'An end-to-end brand identity and landing page design case study for a fictional premium skincare UMKM — crafted to build trust and drive conversions.',
     sections: [
       {
@@ -35,13 +36,13 @@ This is a self-initiated case study. The brief I set for myself: design a comple
           {
             name: 'Ayu, 27',
             role: 'Marketing Staff · Jakarta',
-            quote: '"Kalau websitenya jelek, saya langsung skip. Takut produknya juga nggak serius."',
+            quote: `"If the website is bad, I skip it immediately. I'm afraid the product isn't serious."`,
             tags: ['Ingredient-conscious', 'Busy schedule', 'Instagram user'],
           },
           {
             name: 'Rara, 24',
             role: 'Freelancer · Bandung',
-            quote: '"Saya mau beli lewat WA, tapi perlu lihat dulu reviewnya — beneran works nggak?"',
+            quote: '"I want to buy via WhatsApp, but I need to see the reviews first — does it really work?"',
             tags: ['Budget-aware', 'Prefers WhatsApp order', 'Review-driven'],
           },
         ],

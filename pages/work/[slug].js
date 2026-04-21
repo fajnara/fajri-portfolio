@@ -73,6 +73,20 @@ function CaseHero({ project }) {
       }}>
         {project.title}{project.titleSub && <> <em style={{ color: 'var(--gold)', fontStyle: 'italic' }}>{project.titleSub}</em></>}
       </h1>
+      
+      {project.link && (
+        <a href={project.link} target="_blank" rel="noreferrer" style={{
+          display: 'inline-flex', alignItems: 'center', gap: '8px',
+          fontFamily: 'var(--mono)', fontSize: '11px', letterSpacing: '0.12em',
+          textTransform: 'uppercase', color: 'var(--ink-quiet)',
+          marginBottom: '20px', transition: 'color .25s',
+        }}
+          onMouseOver={e => e.currentTarget.style.color = 'var(--gold)'}
+          onMouseOut={e => e.currentTarget.style.color = 'var(--ink-quiet)'}
+        >
+          View Live Project ↗
+        </a>
+      )}
 
       <p style={{
         fontFamily: 'var(--serif)', fontStyle: 'italic', fontWeight: 300,

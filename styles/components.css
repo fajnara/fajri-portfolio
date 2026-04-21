@@ -350,18 +350,18 @@
   overflow: hidden;
 }
 
-.about-portrait::before {
+/* .about-portrait::before {
   content: "";
   position: absolute;
   inset: 0;
   background-image: repeating-linear-gradient(135deg, rgba(100, 85, 50, 0.3) 0 2px, transparent 2px 16px);
   opacity: .5;
-}
+} */
 
 .about-portrait .label {
   position: absolute;
-  left: 16px;
-  bottom: 16px;
+  left: 18px;
+  bottom: 18px;
   font-family: var(--mono);
   font-size: 10px;
   letter-spacing: 0.2em;
