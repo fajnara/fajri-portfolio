@@ -66,9 +66,9 @@ This is a self-initiated case study. The brief I set for myself: design a comple
         heading: 'The Final Landing Page',
         body: 'The final design is a single-page website with 6 conversion-focused sections: Hero, About, Products, Key Ingredients, Testimonials, and CTA. Each section was designed with a specific role in the customer journey — from building awareness to triggering action.',
         images: [
-          { src: '/images/lumiere/homescreen.webp', caption: 'Lumière Landing Page — Hero & About Section' },
-          { src: '/images/lumiere/product.webp', caption: 'Lumière Product Section' },
-          { src: '/images/lumiere/story.webp', caption: 'Lumière Testimonials & CTA Section' },
+          { src: '/images/lumiere/home.webp', caption: 'Lumière Landing Page — Hero Section' },
+          { src: '/images/lumiere/our-story.webp', caption: 'Lumiere About Section' },
+          { src: '/images/lumiere/our-product.webp', caption: 'Lumière Product Section' },
         ],
         typography: 'Typography plays a central role: Cormorant Garamond for editorial display headings creates emotional warmth and luxury, while DM Sans keeps body text and UI elements clean and legible.',
       },
