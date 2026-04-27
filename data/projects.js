@@ -69,6 +69,9 @@ This is a self-initiated case study. The brief I set for myself: design a comple
           { src: '/images/lumiere/home.webp', caption: 'Lumière Landing Page — Hero Section' },
           { src: '/images/lumiere/our-story.webp', caption: 'Lumiere About Section' },
           { src: '/images/lumiere/our-product.webp', caption: 'Lumière Product Section' },
+          { src: '/images/lumiere/all-product.webp', caption: 'Lumière All Product Section' },
+          { src: '/images/lumiere/detail.webp', caption: 'Lumière Detail Product Section' },
+          { src: '/images/lumiere/order.webp', caption: 'Lumière Order Section' },
         ],
         typography: 'Typography plays a central role: Cormorant Garamond for editorial display headings creates emotional warmth and luxury, while DM Sans keeps body text and UI elements clean and legible.',
       },
@@ -282,11 +285,11 @@ This is a self-initiated case study. The brief I set for myself: design a comple
       {
         num: '06 — Results & Reflection',
         heading: 'What I learned',
-        stats: [
-          { value: '5+', label: 'Pages Built' },
-          { value: '3', label: 'Integrations' },
-          { value: '2', label: 'Dashboard Roles' },
-        ],
+          stats: [
+            { value: '5+', label: 'Pages Built' },
+            { value: '3', label: 'Integrations' },
+            { value: '2', label: 'Dashboard Roles' },
+          ],
         body: 'Building Monova solo — from Figma to deployment — taught me that the hardest problems in full-stack work are never purely technical. The real challenge is deciding what to build, for whom, and in what order.',
         learnings: [
           { num: '1', title: 'Design for the operator, not just the visitor', desc: 'The landing page is what clients see. But the dashboard is what the owner uses every day. Both deserve equal design attention.' },
