@@ -18,7 +18,7 @@ export const projects = [
       status: 'Completed\nPortfolio Work',
     },
     link: 'https://fajriannur.netlify.app/lumiere',
-    description: 'An end-to-end brand identity and landing page design case study for a fictional premium skincare UMKM — crafted to build trust and drive conversions.',
+    description: 'An end-to-end brand identity and landing page design case study for a fictional premium skincare — crafted to build trust and drive conversions.',
     sections: [
       {
         num: '01 — Overview',
@@ -128,7 +128,7 @@ This is a self-initiated case study. The brief I set for myself: design a comple
       {
         num: '02 — Research & User Persona',
         heading: 'What the data told us',
-        body: 'I conducted user research through online surveys (39 respondents) and in-depth interviews (5 participants), targeting urban Indonesians aged 18–40. The goal was to understand their actual relationship with waste — not what they know about recycling, but what they actually do, and why.',
+        body: 'I conducted user research through online surveys (39 respondents) and in-depth interviews (5 participants), targeting urban Indonesians aged 18– 40. The goal was to understand their actual relationship with waste — not what they know about recycling, but what they actually do, and why.',
         findings: [
           '77% produce waste very frequently — the problem isn\'t frequency, it\'s where it goes.',
           '61% are not lazy about throwing away trash — motivation exists, but infrastructure doesn\'t.',
@@ -265,8 +265,8 @@ This is a self-initiated case study. The brief I set for myself: design a comple
         body: 'The owner dashboard was designed around how a small studio actually works — not how software engineers think it should work. Stats at a glance, filterable booking table, status management, and one-click Excel export.',
         images: [
           { src: '/images/monova/dashboard-owner.webp', caption: 'Owner Dashboard — Booking Management' },
-          { src: '/images/monova/dashboard-tim.webp', caption: 'Team Dashboard — Session View' },
-          { src: '/images/monova/export.webp', caption: 'Excel Export Feature' },
+          { src: '/images/monova/dashboard-paket.webp', caption: 'Owner Dashboard — Costume Packages' },
+          { src: '/images/monova/tim.webp', caption: 'Owner Dashboard - Setting Team' },
         ],
         typography: 'Filter tabs (Semua / Baru / Konfirmasi / Selesai / Spam) map directly to the studio\'s real workflow stages. The Excel export was added after realizing most small business owners still rely on spreadsheets for reporting and tax records.',
       },
