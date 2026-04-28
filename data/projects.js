@@ -17,7 +17,7 @@ export const projects = [
       deliverables: 'Brand Identity\nLanding Page · Design System',
       status: 'Completed\nPortfolio Work',
     },
-    link: 'https://fajriannur.netlify.app/lumiere',
+    link: 'https://lumiere-ecru-one.vercel.app/',
     description: 'An end-to-end brand identity and landing page design case study for a fictional premium skincare — crafted to build trust and drive conversions.',
     sections: [
       {
@@ -221,6 +221,7 @@ This is a self-initiated case study. The brief I set for myself: design a comple
       deliverables: 'Landing Page · Dashboard\nEmail & WA Integration',
       status: 'Completed\nPortfolio Work',
     },
+    link: 'https://www.monova.site/',
     description: 'A full-stack booking system for a photography studio — public landing page, owner dashboard, team dashboard, and automated email + WhatsApp notifications. Built with real operational needs in mind.',
     sections: [
       {
@@ -241,7 +242,7 @@ This is a self-initiated case study. The brief I set for myself: design a comple
         body: 'The visual direction was deliberately soft — light lavender gradients, clean serif typography, and generous whitespace. The goal was to feel premium without intimidating. Target audience: young couples and graduates booking their first professional photography session.',
         images: [
           { src: '/images/monova/landing.webp', caption: 'Landing Page — Hero & Stats' },
-          { src: '/images/monova/packages.webp', caption: 'Packages & Pricing Section' },
+          // { src: '/images/monova/packages.webp', caption: 'Packages & Pricing Section' },
           { src: '/images/monova/booking.webp', caption: 'Booking Form' },
         ],
         typography: 'Color system built around a soft lavender-white base with dark charcoal text — approachable but professional. WhatsApp green used exclusively for the floating CTA to leverage familiarity.',
@@ -280,7 +281,7 @@ This is a self-initiated case study. The brief I set for myself: design a comple
           { num: '03', label: 'Excel Export', desc: 'One-click export of all booking data — compatible with any spreadsheet tool for reporting' },
         ],
         visual: 'These aren\'t nice-to-haves — they\'re the difference between a website and a system. A landing page gets you bookings. A system lets you run a business.',
-        image: { src: '/images/monova/integrations.webp', caption: 'Email & WhatsApp Integration Flow' },
+        // image: { src: '/images/monova/integrations.webp', caption: 'Email & WhatsApp Integration Flow' },
       },
       {
         num: '06 — Results & Reflection',
